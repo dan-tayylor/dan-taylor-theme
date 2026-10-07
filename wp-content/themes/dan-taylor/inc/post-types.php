@@ -30,7 +30,7 @@ function dan_theme_custom_post_type() {
 		'labels'              => $portfolio_labels,
 		'supports'            => array( 'title', 'editor' ),
 		'hierarchical'        => true,
-		'public'              => true,
+		'public'              => false,
 		'show_ui'             => true,
 		'show_in_menu'        => true,
 		'menu_position'       => 20,
