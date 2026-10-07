@@ -1,0 +1,87 @@
+  .btn-outline {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #ffffff;
+    background: none;
+    border: none;
+    padding: 8px 28px;
+    cursor: pointer;
+    z-index: 1;
+  }
+ 
+  .btn-outline::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #D85A30;
+    border-radius: 100px;
+    transition: border-radius 0.3s ease, inset 0.3s ease;
+    z-index: -1;
+  }
+ 
+  .btn-outline:hover::before {
+    border-radius: 30% 70% 62% 38% / 55% 42% 58% 45%;
+    inset: -6px -4px;
+  }
+ 
+  @media (prefers-reduced-motion: reduce) {
+    .btn-outline::before {
+      transition: none;
+    }
+  }
+
+  .social-icons svg{
+    @apply mk:w-full mk:h-auto;
+  }
+
+  .brace-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: #D85A30;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 4px;
+  }
+ 
+  .brace-svg {
+    transition: transform 0.3s ease;
+  }
+ 
+  .brace-svg path {
+    stroke: #D85A30;
+    stroke-width: 2.5;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: d 0.35s ease;
+  }
+ 
+  .brace-btn:hover .brace-l {
+    transform: translateX(-8px);
+  }
+ 
+  .brace-btn:hover .brace-r {
+    transform: translateX(8px);
+  }
+ 
+  .brace-btn:hover .brace-l path {
+    d: path("M11,3 Q4,6 7,12 Q2,13 7,14 Q4,20 11,23");
+  }
+ 
+  .brace-btn:hover .brace-r path {
+    d: path("M3,3 Q10,6 7,12 Q12,13 7,14 Q10,20 3,23");
+  }
+ 
+  @media (prefers-reduced-motion: reduce) {
+    .brace-svg,
+    .brace-svg path {
+      transition: none;
+    }
+  }

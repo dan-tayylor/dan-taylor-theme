@@ -1,0 +1,16 @@
+{
+    "name": "portfolio",
+    "title": "Portfolio",
+    "description": "Portfolio block with fields for image, title, text and CTA.",
+    "category": "content",
+    "icon": "format-image",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "portfolio.php"
+    },
+    "supports": {
+        "align": false,
+        "mode": false,
+        "anchor": true
+    }
+}

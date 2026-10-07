@@ -1,0 +1,22 @@
+{
+    "name": "image-text",
+    "title": "Image Text",
+    "description": "Image and Text split with fields for image, title, text and CTA.",
+    "category": "content",
+    "icon": "format-image",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "image-text.php"
+    },
+    "supports": {
+        "align": false,
+        "mode": false,
+        "anchor": true
+    },
+    "attributes": {
+        "previewImage": {
+            "type": "string",
+            "default": "/wp-content/themes/mini-make-2026/assets/src/img/blocks/image-text.jpg"
+        }
+    }
+}

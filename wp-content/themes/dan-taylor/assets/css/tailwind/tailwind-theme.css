@@ -1,0 +1,26 @@
+@theme {
+	/**
+	 * These theme variables use CSS variables set by WordPress using values
+	 * from your `theme.json` file.
+	 *
+	 * If you are using the classic editor, you may need to use hardcoded
+	 * color values instead of the `var()` functions below.
+	 */
+
+
+	--color-background: #FBF5F0;
+	--color-orange: #D85A30;
+	--color-coral: #FF7F50	;
+	--color-charcoal: #111111;
+	--color-navy: #1C2B45;
+
+	/* Font Families */
+	--font-danfo: "Danfo", sans-serif;
+	--font-faustina: "Faustina", serif;
+	--font-source-code: "Source Code Pro", monospace;
+	--font-space-mono: "Space Mono", monospace;
+
+	/* Max width */
+	--max-width-site: 1312px;
+	--max-width-site-sm: 1000px;
+}

@@ -1,0 +1,16 @@
+{
+    "name": "about",
+    "title": "About",
+    "description": "Two-column about section: intro text alongside a wrapped list of skill pills.",
+    "category": "content",
+    "icon": "admin-users",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "about.php"
+    },
+    "supports": {
+        "align": false,
+        "mode": false,
+        "anchor": true
+    }
+}

@@ -1,0 +1,11 @@
+  .prose p{
+    @apply mk:mb-4;
+  }
+  
+  .prose.dark-list-items ul{
+    @apply mk:marker:text-white;
+  }
+  
+  .prose ul{
+    @apply mk:list-disc;
+  }

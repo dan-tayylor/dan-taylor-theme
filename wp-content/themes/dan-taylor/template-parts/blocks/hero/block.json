@@ -1,0 +1,22 @@
+{
+    "name": "hero",
+    "title": "Hero",
+    "description": "Hero banner.",
+    "category": "hero",
+    "icon": "cover-image",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "hero.php"
+    },
+    "supports": {
+        "align": false,
+        "mode": false,
+        "anchor": true
+    },
+    "attributes": {
+        "previewImage": {
+            "type": "string",
+            "default": "/wp-content/themes/dan_theme/assets/img/blocks/hero.jpg"
+        }
+    }
+}

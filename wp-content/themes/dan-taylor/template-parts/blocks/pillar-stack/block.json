@@ -1,0 +1,20 @@
+{
+    "name": "pillar-stack",
+    "title": "Pillar Stack",
+    "description": "An index list beside numbered pillars that pin and stack on top of one another as the visitor scrolls.",
+    "viewScript": [
+        "file:./pillar-stack.js"
+    ],
+    "category": "content",
+    "icon": "list-view",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "pillar-stack.php",
+        "blockVersion": 3
+    },
+    "supports": {
+        "align": false,
+        "mode": false,
+        "anchor": true
+    }
+}

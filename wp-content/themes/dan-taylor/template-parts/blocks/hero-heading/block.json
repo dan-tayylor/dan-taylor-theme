@@ -1,0 +1,16 @@
+{
+    "name": "hero-heading",
+    "title": "Hero Heading",
+    "description": "hero heading banner.",
+    "category": "hero-heading",
+    "icon": "cover-image",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "hero-heading.php"
+    },
+    "supports": {
+        "align": false,
+        "mode": false,
+        "anchor": true
+    }
+}

@@ -1,0 +1,16 @@
+{
+	"require-dev": {
+		"squizlabs/php_codesniffer": "3.9.0",
+		"wp-coding-standards/wpcs": "~3.1.0"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
+	"scripts": {
+		"format": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf --no-cache --standard=WordPress --report=full --ignore=./wp-content/themes/dan-taylor/node_modules ./wp-content/themes/dan-taylor",
+		"lint": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --no-cache --standard=WordPress --report=full --ignore=./wp-content/themes/dan-taylor/node_modules ./wp-content/themes/dan-taylor",
+		"lint:errors": "@lint -n"
+	}
+}

@@ -1,0 +1,22 @@
+{
+    "name": "cards-row",
+    "title": "Cards Row",
+    "description": "Cards with image, title, text and cta.",
+    "category": "content",
+    "icon": "images-alt",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "cards-row.php"
+    },
+    "supports": {
+        "align": false,
+        "mode": false,
+        "anchor": true
+    },
+    "attributes": {
+        "previewImage": {
+            "type": "string",
+            "default": "/wp-content/themes/mini-make-2026/assets/src/img/blocks/cards-row.jpg"
+        }
+    }
+}

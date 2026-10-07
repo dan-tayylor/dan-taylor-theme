@@ -1,0 +1,16 @@
+{
+    "name": "logos",
+    "title": "Logos",
+    "description": "A grid of logos, three per row on desktop.",
+    "category": "content",
+    "icon": "grid-view",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "logos.php"
+    },
+    "supports": {
+        "align": false,
+        "mode": false,
+        "anchor": true
+    }
+}
