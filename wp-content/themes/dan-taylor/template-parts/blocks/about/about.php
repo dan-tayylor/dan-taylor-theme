@@ -29,7 +29,7 @@ if ( ! empty( $block['className'] ) ) {
 		<div class="mk:mb-10 mk:md:mb-12 mk:text-center mk:flex mk:flex-col mk:items-center">
 			<div class="mk:text-center mk:flex mk:justify-center mk:items-center">
 				<?php echo dan_theme_get_icon_svg( 'ui', 'bracket-left', 32 ); ?>
-				<h2 class="mk:font-faustina mk:text-3xl mk:tracking-wide mk:mb-1.5"><?php echo esc_html( $heading ); ?></h2> 
+				<h2 class="mk:font-space mk:text-3xl mk:font-semibold"><?php echo esc_html( $heading ); ?></h2> 
 				<?php echo dan_theme_get_icon_svg( 'ui', 'bracket-right', 32 ); ?>
 			</div>
 		</div>
@@ -44,7 +44,7 @@ if ( ! empty( $block['className'] ) ) {
 			<?php if ( $skills ) : ?>
 				<div class="mk:md:w-1/3 mk:flex mk:flex-wrap">
 					<?php foreach ( $skills as $skill ) : ?>
-						<div class="mk:mr-2 mk:mb-2 mk:text-sm mk:shadow-2xl mk:text-orange mk:border-2 mk:border-orange mk:px-3 mk:py-1 mk:rounded-4xl mk:font-medium"><?php echo esc_html( $skill['text'] ); ?></div>
+						<div class="mk:mr-2 mk:mb-2 mk:font-space mk:text-sm mk:font-semibold mk:shadow-2xl mk:text-orange mk:border-2 mk:border-orange mk:px-3 mk:py-1 mk:rounded-4xl"><?php echo esc_html( $skill['text'] ); ?></div>
 					<?php endforeach; ?>
 				</div>
 			<?php endif; ?>

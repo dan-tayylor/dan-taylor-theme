@@ -25,7 +25,7 @@
 				<?php echo dan_theme_get_icon_svg( 'ui', 'github', 24 ); ?>
 			</a>
 		</div>
-		<p class="">© <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?></p>
+		<p>© <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?></p>
 	</div>
 </footer>
 </div>

@@ -28,7 +28,7 @@ if ( ! empty( $block['className'] ) ) {
 	<div class="mk:w-full mk:max-w-site mk:mx-auto mk:border-t-2 mk:border-orange mk:pt-16">
 		<div class="mk:mb-16 mk:text-center mk:flex mk:justify-center mk:items-center">
 			<?php echo dan_theme_get_icon_svg( 'ui', 'bracket-left', 32 ); ?>
-			<h2 class="mk:font-faustina mk:text-2xl mk:md:text-3xl mk:tracking-wide mk:mb-1.5">
+			<h2 class="mk:font-space mk:text-2xl mk:md:text-3xl mk:font-semibold">
 				<span class="mk:hidden mk:md:block"><?php echo esc_html( $heading ); ?></span>
 				<span class="mk:md:hidden"><?php echo esc_html( $mobile_heading ); ?></span>
 			</h2>

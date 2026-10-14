@@ -3,6 +3,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    @apply mk:font-space mk:font-medium;
     font-size: 16px;
     color: #ffffff;
     background: none;
@@ -38,6 +39,7 @@
   }
 
   .brace-btn {
+     @apply mk:font-space mk:font-medium;
     position: relative;
     display: inline-flex;
     align-items: center;

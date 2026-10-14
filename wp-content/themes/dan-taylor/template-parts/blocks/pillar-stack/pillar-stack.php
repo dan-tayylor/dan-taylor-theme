@@ -31,7 +31,7 @@ if ( ! empty( $block['className'] ) ) {
 			<div class="mk:max-w-2xl mk:mx-auto mk:mb-16 mk:text-center">
 				<div class="mk:text-center mk:flex mk:justify-center mk:items-center">
 					<?php echo dan_theme_get_icon_svg( 'ui', 'bracket-left', 32 ); ?>
-					<h2 class="mk:font-faustina mk:text-3xl mk:tracking-wide mk:mb-1.5"><?php echo esc_html( $heading ); ?></h2> 
+					<h2 class="mk:font-space mk:text-3xl mk:font-semibold"><?php echo esc_html( $heading ); ?></h2> 
 					<?php echo dan_theme_get_icon_svg( 'ui', 'bracket-right', 32 ); ?>
 				</div>
 				<?php if($text) { ?>
@@ -57,7 +57,7 @@ if ( ! empty( $block['className'] ) ) {
 											<img src="<?php echo esc_url( $item['icon']['url'] ); ?>" alt="" aria-hidden="true" width="40" height="40">
 										<?php endif; ?>
 									</span>
-									<p class="pillar-stack-nav-label mk:font-faustina mk:text-xl">
+									<p class="pillar-stack-nav-label mk:font-space mk:text-xl mk:font-semibold">
 										<?php echo esc_html( $item['title'] ); ?>
 									</p>
 								</a>
@@ -79,12 +79,12 @@ if ( ! empty( $block['className'] ) ) {
 									<hr class="mk:border-0 mk:border-t mk:border-white/32 mk:m-0">
 								<?php endif; ?>
 								<div class="pillar-stack-panel-content">
-									<p class="pillar-stack-panel-number mk:text-white mk:shrink-0 mk:mb-2">
+									<p class="pillar-stack-panel-number mk:font-space mk:font-medium mk:text-white mk:shrink-0 mk:mb-2">
 										<?php echo esc_html( $date ); ?>
 									</p>
 									<div class="mk:flex mk:flex-col mk:gap-2">
 										<?php if ( ! empty( $item['title'] ) ) : ?>
-											<p class="mk:font-faustina mk:text-2xl mk:tracking-wide mk:text-white mk:mb-3"><?php echo esc_html( $item['title'] ); ?></p>
+											<p class="mk:font-space mk:text-2xl mk:font-semibold mk:text-white mk:mb-3"><?php echo esc_html( $item['title'] ); ?></p>
 										<?php endif; ?>
 										<?php if ( ! empty( $item['text'] ) ) : ?>
 											<div class="prose mk:text-white dark-list-items"><?php echo wp_kses_post( $item['text'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped by wp_kses_post(). ?></div>

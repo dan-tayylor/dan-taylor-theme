@@ -1,13 +1,16 @@
+.primary-navigation ul li {
+    @apply mk:flex mk:items-center;
+}
+
 .primary-navigation ul li a {
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    @apply mk:tracking-wide;
 }
 
 .primary-navigation .nav-bracket {
     display: inline-flex;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     color: #D85A30;
     opacity: 0;
     transition: opacity 0.25s ease, transform 0.25s ease;
@@ -27,9 +30,6 @@
     transform: translateX(0);
 }
 
-/* Mobile menu toggle: top and bottom lines rotate into an X and the middle
-   line fades out. header-navigation.js already toggles this .active class
-   on click; these are just the target styles for its existing transitions. */
 #main-menu-toggle.active .menu-line:first-child {
     transform: translateY(9px) rotate(45deg);
 }

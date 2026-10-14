@@ -30,19 +30,19 @@ if ( ! empty( $block['className'] ) ) {
 			<div class="mk:md:w-1/2 hero-text">
 				<div id="hero-branding" class="mk:flex mk:items-center mk:gap-3 mk:mb-2">
 					<?php if ( $logo ) : ?>
-						<div class="site-logo mk:w-12"><img src="<?php echo esc_url( $logo['url'] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>"></div>
+						<div class="site-logo mk:w-10"><img src="<?php echo esc_url( $logo['url'] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>"></div>
 					<?php endif; ?>
-					<h1 class="mk:font-faustina mk:text-4xl mk:tracking-wide"><?php echo esc_html( $heading ); ?></h1>
+					<h1 class="mk:font-space mk:text-4xl mk:font-semibold"><?php echo esc_html( $heading ); ?></h1>
 				</div>
-				<h2 class="mk:text-xl mk:font-medium mk:mb-4"><?php echo esc_html($job_title); ?></h2>
-				<div class="prose">
+				<h2 class="mk:font-space mk:text-2xl mk:font-semibold mk:mb-4"><?php echo esc_html($job_title); ?></h2>
+				<div class="prose mk:text-lg">
 					<?php echo wp_kses_post( $text ); ?>
 				</div>
 			</div>
 			<?php if ( $image ) { ?>
 				<div class="mk:md:w-1/2 mk:mt-16 mk:md:mt-0">
 					<div class="hero-photo mk:w-80 mk:h-80 mk:mx-auto mk:rounded-full">
-							<div class="hero-photo__blob"></div>
+						<div class="hero-photo__blob"></div>
 						<img class="mk:w-full mk:h-full mk:object-cover" src="<?php echo esc_html( $image['url'] ); ?>" alt="<?php echo esc_html( $image['alt'] ); ?>">
 					</div>
 				</div>

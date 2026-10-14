@@ -28,7 +28,7 @@ if ( ! empty( $block['className'] ) ) {
         <div class="fade-in-group mk:max-w-2xl mk:mx-auto mk:mb-16 mk:text-center">
             <div class="mk:flex mk:justify-center mk:items-center">
                 <?php echo dan_theme_get_icon_svg( 'ui', 'bracket-left', 32 ); ?>
-                <h2 class="mk:font-faustina mk:text-2xl mk:md:text-3xl mk:tracking-wide mk:mb-1.5"><?php echo esc_html( $heading ); ?></h2> 
+                <h2 class="mk:font-space mk:font-semibold mk:text-2xl mk:md:text-3xl"><?php echo esc_html( $heading ); ?></h2> 
                 <?php echo dan_theme_get_icon_svg( 'ui', 'bracket-right', 32 ); ?>
             </div>
             <?php if($text) { ?>
@@ -61,12 +61,12 @@ if ( ! empty( $block['className'] ) ) {
                                 <div class="mk:mt-4 mk:mb-3">
                                     <div class="mk:flex mk:flex-wrap">
                                         <?php foreach($tech as $t) { ?>
-                                            <div class="mk:mr-2 mk:text-xs mk:shadow-2xl mk:text-orange mk:border-2 mk:border-orange mk:px-3 mk:py-1 mk:rounded-4xl mk:font-medium"><?php echo esc_html( $t['text'] ); ?></div>
+                                            <div class="mk:font-space mk:font-semibold mk:mr-2 mk:text-xs mk:shadow-2xl mk:text-orange mk:border-2 mk:border-orange mk:px-3 mk:py-1 mk:rounded-4xl"><?php echo esc_html( $t['text'] ); ?></div>
                                         <?php } ?>
                                     </div>
                                 </div>
                             <?php } ?>
-                            <h3 class="mk:font-faustina mk:text-2xl mk:tracking-wide mk:mb-2"><?php echo esc_html( $work_title ); ?></h3>
+                            <h3 class="mk:font-space mk:font-semibold mk:text-2xl mk:mb-2"><?php echo esc_html( $work_title ); ?></h3>
                             <div class="prose">
                                 <?php the_content(); ?>
                             </div>
@@ -81,15 +81,13 @@ if ( ! empty( $block['className'] ) ) {
                                         <svg class="brace-svg brace-l" width="14" height="26" viewBox="0 0 14 26">
                                             <path d="M11,3 Q7.5,3 4,3 Q4,13 4,23 Q7.5,23 11,23"/>
                                         </svg>
-                                        View site
+                                        View Site
                                         <svg class="brace-svg brace-r" width="14" height="26" viewBox="0 0 14 26">
                                             <path d="M3,3 Q6.5,3 10,3 Q10,13 10,23 Q6.5,23 3,23"/>
                                         </svg>
                                     </a>
                                 <?php } ?>
                             </div>
-                            
-                            
                         </div>
                     </div>
                 <?php }

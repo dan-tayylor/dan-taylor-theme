@@ -18,8 +18,8 @@ if ( $hide_until_scroll ) {
 <div class="site-branding">
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="header-branding" class="<?php echo esc_attr( $group_class ); ?>">
 		<?php if ( $logo ) : ?>
-			<div class="site-logo mk:w-10"><img src="<?php echo esc_url( $logo['url'] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>"></div>
+			<div class="site-logo mk:w-8"><img src="<?php echo esc_url( $logo['url'] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>"></div>
 		<?php endif; ?>
-		<div><span class="site-title mk:font-faustina mk:text-2xl mk:tracking-wide"><?php bloginfo( 'name' ); ?></span></div>
+		<div><span class="site-title mk:font-space mk:text-2xl mk:font-semibold"><?php bloginfo( 'name' ); ?></span></div>
 	</a>
 </div>
