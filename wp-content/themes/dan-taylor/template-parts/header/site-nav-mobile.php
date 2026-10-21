@@ -13,10 +13,10 @@
 		<?php wp_nav_menu(
 			array(
 				'theme_location'  => 'primary',
-				'menu_class'      => 'mk:font-space mk:text-3xl mk:font-semibold mk:text-black mk:text-center',
+				'menu_class'      => 'mk:font-space mk:text-3xl mk:font-medium mk:text-smoke mk:text-center',
 				'container_class' => 'primary-menu-container',
 				'items_wrap'      => '<ul id="primary-menu-list" class="%2$s">%3$s</ul>',
-				'add_li_class'    => 'mk:leading-none mk:mb-4',
+				'add_li_class'    => 'mk:leading-none mk:mb-5',
 				'fallback_cb'     => false,
 			)
 		); ?>

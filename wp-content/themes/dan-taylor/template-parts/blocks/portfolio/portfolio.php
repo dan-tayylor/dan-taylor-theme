@@ -10,6 +10,7 @@ $heading   = get_field( 'heading' );
 $text   = get_field( 'text' );
 $portfolio = get_field( 'portfolio' );
 $cta = get_field( 'cta' );
+$disclaimer = get_field( 'disclaimer' );
 
 // Block ID.
 $block_id = 'portfolio-block';
@@ -23,20 +24,9 @@ if ( ! empty( $block['className'] ) ) {
 	$class_name .= ' ' . $block['className'];
 } ?>
 
-<div id="<?php echo esc_html( $block_id ); ?>" class="<?php echo esc_html( $class_name ); ?> mk:px-4 mk:md:px-8 mk:py-16">
-	<div class="mk:relative mk:w-full mk:max-w-site mk:mx-auto mk:border-t-2 mk:border-orange mk:pt-16 mk:md:pt-24">
-        <div class="fade-in-group mk:max-w-2xl mk:mx-auto mk:mb-16 mk:text-center">
-            <div class="mk:flex mk:justify-center mk:items-center">
-                <?php echo dan_theme_get_icon_svg( 'ui', 'bracket-left', 32 ); ?>
-                <h2 class="mk:font-space mk:font-semibold mk:text-2xl mk:md:text-3xl"><?php echo esc_html( $heading ); ?></h2> 
-                <?php echo dan_theme_get_icon_svg( 'ui', 'bracket-right', 32 ); ?>
-            </div>
-            <?php if($text) { ?>
-                <div class="prose mk:mt-6">
-                    <?php echo wp_kses_post($text); ?>
-                </div>
-            <?php } ?>
-        </div>
+<div id="<?php echo esc_html( $block_id ); ?>" class="<?php echo esc_html( $class_name ); ?> mk:px-4 mk:md:px-8 mk:pt-6 mk:pb-16">
+	<div class="mk:relative mk:w-full mk:max-w-site mk:mx-auto">
+        
         <?php if($portfolio) { ?>
             <div class="mk:grid mk:md:grid-cols-2 mk:gap-8">
                 <?php foreach($portfolio as $post) {
@@ -58,7 +48,7 @@ if ( ! empty( $block['className'] ) ) {
                                 </div>
                             <?php } ?>
                             <?php if($tech) { ?>
-                                <div class="mk:mt-4 mk:mb-3">
+                                <div class="mk:mt-4 mk:mb-4">
                                     <div class="mk:flex mk:flex-wrap">
                                         <?php foreach($tech as $t) { ?>
                                             <div class="mk:font-space mk:font-semibold mk:mr-2 mk:text-xs mk:shadow-2xl mk:text-orange mk:border-2 mk:border-orange mk:px-3 mk:py-1 mk:rounded-4xl"><?php echo esc_html( $t['text'] ); ?></div>
@@ -66,7 +56,7 @@ if ( ! empty( $block['className'] ) ) {
                                     </div>
                                 </div>
                             <?php } ?>
-                            <h3 class="mk:font-space mk:font-semibold mk:text-2xl mk:mb-2"><?php echo esc_html( $work_title ); ?></h3>
+                            <h3 class="mk:font-space mk:font-medium mk:text-2xl mk:md:text-3xl mk:text-smoke mk:mb-4"><?php echo esc_html( $work_title ); ?></h3>
                             <div class="prose">
                                 <?php the_content(); ?>
                             </div>
@@ -77,7 +67,7 @@ if ( ! empty( $block['className'] ) ) {
                             <?php } ?>
                             <div>
                                 <?php if( $site_url) { ?>
-                                    <a href="<?php echo esc_url( $site_url ); ?>" target="_blank" class="brace-btn mk:mt-8 mk:md:mt-0">
+                                    <a href="<?php echo esc_url( $site_url ); ?>" target="_blank" class="brace-btn mk:mt-8 mk:md:mt-0 mk:uppercase">
                                         <svg class="brace-svg brace-l" width="14" height="26" viewBox="0 0 14 26">
                                             <path d="M11,3 Q7.5,3 4,3 Q4,13 4,23 Q7.5,23 11,23"/>
                                         </svg>
@@ -92,6 +82,11 @@ if ( ! empty( $block['className'] ) ) {
                     </div>
                 <?php }
                 wp_reset_postdata(); ?>
+            </div>
+        <?php } ?>
+        <?php if($disclaimer) { ?>
+            <div class="mk:mt-16 mk:md:pr-28 mk:text-ash">
+               <?php echo wp_kses_post($disclaimer); ?>
             </div>
         <?php } ?>
         <?php if($cta) { ?>

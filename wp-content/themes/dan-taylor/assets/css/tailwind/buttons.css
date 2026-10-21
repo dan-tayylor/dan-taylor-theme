@@ -3,21 +3,20 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    @apply mk:font-space mk:font-medium;
-    font-size: 16px;
-    color: #ffffff;
+    @apply mk:font-space mk:font-medium mk:text-white mk:uppercase;
     background: none;
     border: none;
     padding: 8px 28px;
     cursor: pointer;
     z-index: 1;
+
   }
  
   .btn-outline::before {
+    @apply mk:bg-orange;
     content: "";
     position: absolute;
     inset: 0;
-    background: #D85A30;
     border-radius: 100px;
     transition: border-radius 0.3s ease, inset 0.3s ease;
     z-index: -1;
@@ -39,13 +38,11 @@
   }
 
   .brace-btn {
-     @apply mk:font-space mk:font-medium;
+     @apply mk:font-space mk:font-medium mk:text-orange;
     position: relative;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-size: 16px;
-    color: #D85A30;
     background: none;
     border: none;
     cursor: pointer;
@@ -57,7 +54,7 @@
   }
  
   .brace-svg path {
-    stroke: #D85A30;
+    @apply mk:stroke-orange;
     stroke-width: 2.5;
     fill: none;
     stroke-linecap: round;

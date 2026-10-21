@@ -7,11 +7,11 @@
 	 * color values instead of the `var()` functions below.
 	 */
 
-
-	--color-background: #FBF5F0;
-	--color-orange: #D85A30;
-	--color-coral: #FF7F50	;
-	--color-charcoal: #111111;
+	--color-orange: #FF6B4A;
+	--color-charcoal: #242424;
+	--color-ash: #9E9E9E;
+	--color-smoke: #464646;
+	--color-mist: #EBEBEB;
 	--color-navy: #1C2B45;
 
 	/* Font Families */

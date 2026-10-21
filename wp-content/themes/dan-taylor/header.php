@@ -11,11 +11,20 @@
  */
 
 // Tailwind body classes.
-$css_body_classes = array( 'mk:font-source-code', 'mk:text-charcoal', 'mk:overflow-x-hidden' );
+$css_body_classes = array( 'mk:font-source-code', 'mk:text-charcoal', 'mk:overflow-x-hidden', 'mk:selection:bg-orange', 'mk:selection:text-white' );
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-BMEBPX7W3F"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-BMEBPX7W3F');
+	</script>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">

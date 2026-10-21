@@ -28,12 +28,9 @@ if ( ! empty( $block['className'] ) ) {
 <div id="<?php echo esc_html( $block_id ); ?>" class="<?php echo esc_html( $class_name ); ?> mk:relative mk:px-4 mk:md:px-8 mk:pt-16 mk:pb-8">
 	<div class="mk:max-w-site mk:mx-auto mk:h-full mk:flex mk:items-center">
 			<div class="mk:w-full mk:max-w-2xl hero-text mk:mx-auto mk:text-center">
-           <div class="mk:mb-6 mk:text-center mk:flex mk:justify-center mk:items-center">
-            <?php echo dan_theme_get_icon_svg( 'ui', 'bracket-left', 38 ); ?>
-					    <h1 class="mk:font-space mk:text-3xl mk:md:text-4xl mk:font-semibold mk:text-center"><?php echo esc_html( $heading ); ?></h1>
-            <?php echo dan_theme_get_icon_svg( 'ui', 'bracket-right', 38 ); ?>
-        </div>
-				<div class="prose mk:text-lg">
+          <h1 class="mk:font-space mk:text-3xl mk:md:text-4xl mk:font-medium mk:text-smoke mk:text-center mk:mb-6"><?php echo esc_html( $heading ); ?></h1>
+            
+				<div class="prose">
 					<?php echo wp_kses_post( $text ); ?>
 				</div>
 				<?php if( $cta ) { ?>

@@ -15,7 +15,7 @@
 			wp_nav_menu(
 				array(
 					'theme_location'  => 'primary',
-					'menu_class'      => 'menu-wrapper mk:flex mk:items-center mk:gap-2 mk:text-lg mk:font-space mk:font-semibold',
+					'menu_class'      => 'menu-wrapper mk:flex mk:items-center mk:gap-10 mk:text-lg mk:font-space mk:font-semibold',
 					'container_class' => 'primary-menu-container',
 					'items_wrap'      => '<ul id="primary-menu-list" class="%2$s">%3$s</ul>',
 					'fallback_cb'     => false,

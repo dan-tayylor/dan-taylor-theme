@@ -26,23 +26,14 @@ if ( ! empty( $block['className'] ) ) {
 ?>
 
 <?php if ( $items ) : ?>
-	<div id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?> mk:px-4 mk:md:px-8 mk:py-14">
-		<div class="mk:max-w-site mk:mx-auto mk:border-t-2 mk:border-orange mk:pt-16 mk:md:pt-24">
-			<div class="mk:max-w-2xl mk:mx-auto mk:mb-16 mk:text-center">
-				<div class="mk:text-center mk:flex mk:justify-center mk:items-center">
-					<?php echo dan_theme_get_icon_svg( 'ui', 'bracket-left', 32 ); ?>
-					<h2 class="mk:font-space mk:text-3xl mk:font-semibold"><?php echo esc_html( $heading ); ?></h2> 
-					<?php echo dan_theme_get_icon_svg( 'ui', 'bracket-right', 32 ); ?>
-				</div>
-				<?php if($text) { ?>
-					<div class="prose mk:mt-6">
-						<?php echo wp_kses_post($text); ?>
-					</div>
-				<?php } ?>
-			</div>
-			<div class="pillar-stack mk:flex mk:flex-col mk:md:flex-row mk:gap-12 mk:md:gap-8 mk:items-start">
-				<nav class="pillar-stack-nav mk:w-full mk:md:w-[443px] mk:shrink-0 mk:pt-4" aria-label="<?php esc_attr_e( 'Pillars', 'datatonic' ); ?>">
-					<ul class="mk:flex mk:flex-col mk:gap-8">
+	<div id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?> mk:px-4 mk:md:px-8 mk:pb-10 mk:md:pb-14">
+		<div class="mk:max-w-site mk:mx-auto">
+			<h2 class="mk:font-space mk:text-3xl mk:font-medium mk:text-smoke"><?php echo esc_html( $heading ); ?></h2> 
+			<div class="pillar-stack mk:flex mk:flex-col mk:md:flex-row mk:items-start mk:mt-10 mk:md:mt-16">
+
+				<nav class="pillar-stack-nav mk:hidden mk:md:block mk:w-1/2 mk:shrink-0 mk:pt-4" aria-label="<?php esc_attr_e( 'Pillars', 'datatonic' ); ?>">
+
+					<ul class="mk:max-w-[500px] mk:pr-16 mk:flex mk:flex-col mk:gap-8">
 						<?php foreach ( $items as $item_index => $item ) : ?>
 							<?php
 							$panel_id = $block_id . '-panel-' . $item_index;
@@ -57,7 +48,7 @@ if ( ! empty( $block['className'] ) ) {
 											<img src="<?php echo esc_url( $item['icon']['url'] ); ?>" alt="" aria-hidden="true" width="40" height="40">
 										<?php endif; ?>
 									</span>
-									<p class="pillar-stack-nav-label mk:font-space mk:text-xl mk:font-semibold">
+									<p class="pillar-stack-nav-label mk:font-space mk:text-xl mk:font-medium">
 										<?php echo esc_html( $item['title'] ); ?>
 									</p>
 								</a>
@@ -66,7 +57,7 @@ if ( ! empty( $block['className'] ) ) {
 					</ul>
 					<div class="pillar-stack-nav-spacer" aria-hidden="true"></div>
 				</nav>
-				<div class="pillar-stack-panels mk:flex-1 mk:flex mk:flex-col mk:gap-4 mk:w-full">
+				<div class="pillar-stack-panels mk:mk:w-1/2 mk:flex mk:flex-col mk:gap-4 mk:w-full">
 					<?php foreach ( $items as $item_index => $item ) : 
 						$date = $item['date'];
 						?>
@@ -84,7 +75,7 @@ if ( ! empty( $block['className'] ) ) {
 									</p>
 									<div class="mk:flex mk:flex-col mk:gap-2">
 										<?php if ( ! empty( $item['title'] ) ) : ?>
-											<p class="mk:font-space mk:text-2xl mk:font-semibold mk:text-white mk:mb-3"><?php echo esc_html( $item['title'] ); ?></p>
+											<p class="mk:font-space mk:text-2xl mk:font-medium mk:text-white mk:mb-3"><?php echo esc_html( $item['title'] ); ?></p>
 										<?php endif; ?>
 										<?php if ( ! empty( $item['text'] ) ) : ?>
 											<div class="prose mk:text-white dark-list-items"><?php echo wp_kses_post( $item['text'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped by wp_kses_post(). ?></div>

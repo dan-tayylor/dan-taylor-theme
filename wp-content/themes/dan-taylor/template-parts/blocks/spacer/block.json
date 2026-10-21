@@ -1,0 +1,16 @@
+{
+    "name": "spacer",
+    "title": "Spacer",
+    "description": "A simple spacer block.",
+    "category": "content",
+    "icon": "grid-view",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "spacer.php"
+    },
+    "supports": {
+        "align": false,
+        "mode": false,
+        "anchor": true
+    }
+}

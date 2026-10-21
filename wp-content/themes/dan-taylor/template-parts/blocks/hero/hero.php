@@ -26,26 +26,26 @@ if ( ! empty( $block['className'] ) ) {
 
 <div id="<?php echo esc_html( $block_id ); ?>" class="<?php echo esc_html( $class_name ); ?> mk:relative mk:px-4 mk:md:px-8 mk:py-8 mk:md:py-16">
 	<div class="mk:max-w-site mk:mx-auto mk:h-full mk:flex mk:items-center">
-		<div class="mk:md:flex mk:items-center">
+		<div class="mk:w-full mk:md:flex mk:items-end">
 			<div class="mk:md:w-1/2 hero-text">
 				<div id="hero-branding" class="mk:flex mk:items-center mk:gap-3 mk:mb-2">
-					<?php if ( $logo ) : ?>
-						<div class="site-logo mk:w-10"><img src="<?php echo esc_url( $logo['url'] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>"></div>
-					<?php endif; ?>
-					<h1 class="mk:font-space mk:text-4xl mk:font-semibold"><?php echo esc_html( $heading ); ?></h1>
-				</div>
-				<h2 class="mk:font-space mk:text-2xl mk:font-semibold mk:mb-4"><?php echo esc_html($job_title); ?></h2>
-				<div class="prose mk:text-lg">
-					<?php echo wp_kses_post( $text ); ?>
+					<h1 class="mk:font-space mk:text-5xl mk:md:text-6xl mk:xl:text-[82px] mk:leading-none mk:font-light mk:selection:bg-orange"><?php echo wp_kses_post( $heading ); ?></h1>
 				</div>
 			</div>
+			<div class="mk:md:w-1/2 mk:mt-8 mk:md:mt-0 mk:md:pb-3 hero-text">
+				<div class="prose mk:max-w-xl mk:md:max-w-[367px] mk:md:mx-auto">
+					<?php echo wp_kses_post( $text ); ?>
+					<a href="mailto:dan@thedantaylor.com" target="_blank" class="mk:text-orange mk:underline">Get in touch</a>
+				</div>
+				
+			</div>
 			<?php if ( $image ) { ?>
-				<div class="mk:md:w-1/2 mk:mt-16 mk:md:mt-0">
+				<!-- <div class="mk:md:w-1/2 mk:mt-16 mk:md:mt-0">
 					<div class="hero-photo mk:w-80 mk:h-80 mk:mx-auto mk:rounded-full">
 						<div class="hero-photo__blob"></div>
 						<img class="mk:w-full mk:h-full mk:object-cover" src="<?php echo esc_html( $image['url'] ); ?>" alt="<?php echo esc_html( $image['alt'] ); ?>">
 					</div>
-				</div>
+				</div> -->
 			<?php } ?>
 		</div>
 	</div>

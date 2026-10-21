@@ -51,34 +51,6 @@ function dan_theme_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
 
 add_filter( 'walker_nav_menu_start_el', 'dan_theme_nav_menu_social_icons', 10, 4 );
 
-/**
- * Wraps each desktop primary menu link's text with bracket icons, hidden
- * until hover. Scoped to the desktop menu specifically (identified by its
- * 'menu-wrapper' menu_class) since the same 'primary' theme_location is
- * also used for the mobile off-canvas menu, which has no hover state.
- *
- * @since Dan Theme 1.0.0
- * @package WordPress
- *
- * @param string   $item_output The menu item's starting HTML output.
- * @param WP_Post  $item        Menu item data object.
- * @param int      $depth       Depth of the menu. Used for padding.
- * @param stdClass $args        An object of wp_nav_menu() arguments.
- * @return string The menu item output with the hover brackets added.
- */
-function dan_theme_nav_menu_hover_brackets( $item_output, $item, $depth, $args ) {
-	if ( 'primary' === $args->theme_location && ! empty( $args->menu_class ) && false !== strpos( $args->menu_class, 'menu-wrapper' ) ) {
-		$bracket_left  = '<span class="nav-bracket nav-bracket--left" aria-hidden="true">' . dan_theme_get_icon_svg( 'ui', 'bracket-left', 20 ) . '</span>';
-		$bracket_right = '<span class="nav-bracket nav-bracket--right" aria-hidden="true">' . dan_theme_get_icon_svg( 'ui', 'bracket-right', 20 ) . '</span>';
-
-		$item_output = preg_replace( '/(<a[^>]*>)/', '$1' . $bracket_left, $item_output, 1 );
-		$item_output = str_replace( '</a>', $bracket_right . '</a>', $item_output );
-	}
-
-	return $item_output;
-}
-
-add_filter( 'walker_nav_menu_start_el', 'dan_theme_nav_menu_hover_brackets', 10, 4 );
 
 /**
  * Add class option to menu items.

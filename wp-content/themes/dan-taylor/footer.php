@@ -16,7 +16,7 @@
 </div>
 
 <footer id="colophon" class="site-footer mk:px-4 mk:md:px-8 mk:py-8 ">
-	<div class="mk:w-full mk:max-w-site mk:mx-auto mk:text-center mk:border-t-2 mk:border-orange/80 mk:pt-8">
+	<div class="mk:w-full mk:max-w-site mk:mx-auto mk:text-center mk:border-t mk:border-mist mk:pt-8">
 		<div class="social-icons mk:flex mk:justify-center mk:gap-3 mk:mb-4">
 			<a class="mk:w-6 mk:block" href="https://www.linkedin.com/in/daniel-taylor-30646260" target="_blank" aria-label="LinkedIn">
 				<?php echo dan_theme_get_icon_svg( 'ui', 'linkedin', 24 ); ?>
@@ -25,7 +25,7 @@
 				<?php echo dan_theme_get_icon_svg( 'ui', 'github', 24 ); ?>
 			</a>
 		</div>
-		<p>© <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?></p>
+		<p class="mk:font-space mk:uppercase mk:text-sm">© <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?></p>
 	</div>
 </footer>
 </div>
