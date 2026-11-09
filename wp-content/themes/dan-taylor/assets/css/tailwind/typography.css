@@ -9,3 +9,32 @@
   .prose ul{
     @apply mk:list-disc;
   }
+
+  .prose ol{
+    @apply mk:list-decimal mk:list-outside mk:pl-7.5;
+  }
+
+  .post-content-block h2,
+  .post-content-block h3{
+    @apply mk:font-space mk:font-bold mk:text-3xl mk:text-smoke mk:mt-16 mk:mb-6;
+  }
+
+  .post-content-block h4{
+    @apply mk:text-lg mk:font-semibold mk:mb-1;
+  }
+
+  .post-content-block .prose ul{
+    @apply mk:list-outside mk:pl-4;
+  }
+
+    .post-content-block .prose strong{
+      @apply mk:font-semibold;
+    }
+
+      .post-content-block .prose ul li{
+        @apply mk:mb-2;
+      }
+
+       .post-content-block .prose ol li{
+        @apply mk:mb-1;
+      }

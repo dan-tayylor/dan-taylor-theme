@@ -15,18 +15,32 @@
 
 get_header();
 
-if ( have_posts() ) {
+if ( is_home() && get_option( 'page_for_posts' ) ) {
+	$posts_page_id = (int) get_option( 'page_for_posts' );
+	$posts_page    = $posts_page_id ? get_post( $posts_page_id ) : null;
 
+	if ( $posts_page instanceof WP_Post ) {
+		global $post;
+
+		$post = $posts_page;
+		setup_postdata( $post );
+		get_template_part( 'template-parts/content/content' );
+		wp_reset_postdata();
+	}
+} elseif ( have_posts() ) {
 	while ( have_posts() ) {
 		the_post();
 
-		the_content();
+		$post_type = get_post_type();
+
+		if( $post_type != 'page' ) {
+			get_template_part( 'template-parts/content/content', $post_type);
+		} else {
+			get_template_part( 'template-parts/content/content');
+		}
 	}
 } else {
-
 	get_template_part( 'template-parts/content/content-none' );
-
 }
 
 get_footer();
-

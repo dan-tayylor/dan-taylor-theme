@@ -9,7 +9,8 @@
     @apply mk:uppercase mk:text-sm mk:text-ash mk:font-medium; 
 }
 
-.primary-navigation ul li.current_page_item a {
+.primary-navigation ul li.current_page_item a,
+.primary-navigation ul li.current_page_parent a {
     @apply mk:text-charcoal; 
 }
 

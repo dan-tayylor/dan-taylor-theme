@@ -13,7 +13,8 @@
 	--color-smoke: #464646;
 	--color-mist: #EBEBEB;
 	--color-navy: #1C2B45;
-
+	--color-misty: #f8f8f8;
+	
 	/* Font Families */
 	--font-source-code: "Source Code Pro", monospace;
 	--font-space: "Space Grotesk", sans-serif;
@@ -21,4 +22,5 @@
 	/* Max width */
 	--max-width-site: 1312px;
 	--max-width-site-sm: 1000px;
+	--max-width-site-xs: 864px;
 }

@@ -1,0 +1,16 @@
+{
+    "name": "post-content",
+    "title": "Post Content",
+    "description": "Two-column about section: intro text alongside a wrapped list of skill pills.",
+    "category": "content",
+    "icon": "admin-users",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "post-content.php"
+    },
+    "supports": {
+        "align": false,
+        "mode": false,
+        "anchor": true
+    }
+}

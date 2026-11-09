@@ -15,7 +15,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@_tw/typography": "^0.5.17",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@tailwindcss/cli": "^4.0.14",
@@ -23,5 +22,9 @@
     "husky": "^9.0.11",
     "npm-run-all": "^4.1.5",
     "tailwindcss": "^4.1.7"
+  },
+  "allowScripts": {
+    "esbuild@0.25.12": true,
+    "@parcel/watcher@2.5.1": true
   }
 }
