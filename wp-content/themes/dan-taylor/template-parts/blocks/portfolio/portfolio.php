@@ -26,7 +26,11 @@ if ( ! empty( $block['className'] ) ) {
 
 <div id="<?php echo esc_html( $block_id ); ?>" class="<?php echo esc_html( $class_name ); ?> mk:px-4 mk:md:px-8 mk:pt-6 mk:pb-16">
 	<div class="mk:relative mk:w-full mk:max-w-site mk:mx-auto">
-        
+        <?php if($heading) { ?>
+            <div class="mk:mb-10 mk:md:mb-16 mk:pt-16">
+                <h2 class="mk:font-space mk:text-3xl mk:font-medium mk:text-smoke mk:text-center"><?php echo esc_html( $heading ); ?></h2>
+            </div>
+        <?php } ?>
         <?php if($portfolio) { ?>
             <div class="mk:grid mk:md:grid-cols-2 mk:gap-8">
                 <?php foreach($portfolio as $post) {
